@@ -52,27 +52,31 @@ def decode(url):
 
     print(f"image count: {len(image_array)}")
 
-    for image in image_array:
-      # Convert the image to grayscale
-      gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    try:
+        for image in image_array:
+            # Convert the image to grayscale
+            gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-      # Decode barcodes and QR codes
-      barcodes = pyzbar.decode(gray_image)
-      
-      # Loop over the detected barcodes
-      for barcode in barcodes:
-          # Extract the barcode data
-          barcode_data = barcode.data.decode("utf-8")
-          barcode_type = barcode.type
-          # 创建一个包含barcode_data和barcode_type的字典
-          barcode_dict = {
-              "barcode_data": barcode_data,
-              "barcode_type": barcode_type
-          }
-          # 将字典添加到结果列表中
-          result.append(barcode_dict)
-          # Print the barcode data and type
-          print(f"Barcode Data: {barcode_data}, Barcode Type: {barcode_type}")
+            # Decode barcodes and QR codes
+            barcodes = pyzbar.decode(gray_image)
+            
+            # Loop over the detected barcodes
+            for barcode in barcodes:
+                # Extract the barcode data
+                barcode_data = barcode.data.decode("utf-8")
+                barcode_type = barcode.type
+                # 创建一个包含barcode_data和barcode_type的字典
+                barcode_dict = {
+                    "barcode_data": barcode_data,
+                    "barcode_type": barcode_type
+                }
+                # 将字典添加到结果列表中
+                result.append(barcode_dict)
+                # Print the barcode data and type
+                print(f"Barcode Data: {barcode_data}, Barcode Type: {barcode_type}")
+    except:
+        print(f"image parse exception filepath: {file_path}")
+        raise
 
     return result
 
