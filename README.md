@@ -8,7 +8,7 @@ barcode-scanner是一个条码扫描器，用于识别一维码（barcode）、�
 
 1. 传递参数
 
-   使用POST请求调用barcode-scanner的服务地址：`https://barcode-scan-barcode-vpqedvdtcv.cn-beijing.fcapp.run`。
+   使用POST请求调用barcode-scanner的服务地址：`部署的fc服务触发器 公网访问地址`。
    在请求体中传递参数，参数格式如下：
 
    ```json
