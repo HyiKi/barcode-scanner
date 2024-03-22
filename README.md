@@ -53,3 +53,13 @@ barcode-scanner是一个条码扫描器，用于识别一维码（barcode）、�
 ## 应用场景
 
 barcode-scanner可以解决各种实际业务场景，例如物流面单扫描。通过将物流面单的条码图像传递给barcode-scanner，您可以快速获取条码数据和类型，从而实现自动化处理和跟踪。
+
+## 效果演示
+
+1. 上传条形码
+
+   ![barcode](asset/barcode.png)
+
+2. 识别成功
+
+   ![result](asset/result.png)
