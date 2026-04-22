@@ -1,1 +1,1 @@
-libzbar-dev poppler-utils libc6
+libzbar-dev poppler-utils libc6 libgl1 libglib2.0-0 libxext6 libsm6

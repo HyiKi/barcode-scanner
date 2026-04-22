@@ -5,3 +5,4 @@ numpy
 requests
 pdf2image
 PyPDF2
+zxing-cpp
